@@ -24,3 +24,7 @@ if(myPokemonRoster.length < 5)
 {
     console.log("You Can't Play! Not Enough Pokemon");
 }
+else
+{
+    console.log(myPokemonRoster[i]);
+}
