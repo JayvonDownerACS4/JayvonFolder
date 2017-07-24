@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <link rel="stylesheet" href="fanTimeLine.css">
+    </head>
     <body>
         <!-- <div style = "background-color:lightblue"> -->
-            <center><div>
-                <h1 style = "color:brown;" > SERJ TANKIAN</h1>
-                <h2 style = "color: brown;">Lead Singer of System Of A Down</h2>
-            </center></div>
-            <div>
+            <center><div id = "heading">
+                <h1> SERJ TANKIAN</h1>
+                <h2>Lead Singer of System Of A Down</h2>
+            </div>
+
+            <div class = "dates" >
                 <p style = "font-size:150%"> August 21, 1967</p>
                 <p>Serj Tankian was born in Beirut, Lebanon</p>
-            </div>
-            <center><div>
+                <p>to Armenian parents</p>
+            </div> 
+
+            <div id = "imageTwo">
+                <img src = "data:image/jpeg;base64,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"></img>
+            <div>
+
+            <div class = "dates">
                 <p style = "font-size:150%"> Febuary 16, 1975 </p>
                 <p>Serj Tankain moved to the U.S.A at the age of seven</p>
                 <p>He moved to Los Angeles, California</p>
-            </center></div>
-            <div style = "text-align:right">
+            </div>
+            
+            <div class = "dates">
                 <p style = "font-size:150%">July 10, 1994</h5>
                 <p> Serj and his friends decided to start a band</p>
                 <p>called System of a Down</p>
             </div>
-            <center><di>
+
+            <div class = "dates">
                 <p style = "font-size:150%">1994 - 2006</p>
                 <p>The band made alot of songs such as</p>
                 <p>"Chop Suey", "Hypnotize", "Spiders", and "B.Y.O.B"</p>
-            </center></div>
-            <div>
+            </div>
+            
+            <div id = "imageTwo">
+                <img src = "https://upload.wikimedia.org/wikipedia/en/2/2f/Serj_Tankian_-_Harakiri.jpg"> </img>
+            </div>
+
+            <div class = "dates">
                 <p style = "font-size:150%">November 22, 2007</p>
                 <p> Tankian launched a solo record with the release</p>
                 </p> of his debut record "Elect the Dead"</p>
             </div>
-            
-
-
-
-
-
-
-
-        <!-- </div> -->
     </body>
 </html>
