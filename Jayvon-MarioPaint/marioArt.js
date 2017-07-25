@@ -5,15 +5,11 @@ function setUp()
     frameRate(100);
 }
 
-
-
 function draw()
 {
-    background(244, 248, 252);
     line(mouseX, mouseY, pmouseX, pmouseY);
     print(pmouse + "->" + mouseX);
 }
-
 
 function mousePressed()
 {

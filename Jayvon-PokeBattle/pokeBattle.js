@@ -34,9 +34,6 @@ var hornAttack = 10;
 var incinerate = 10;
 var suckerPunch = 10;
 
-
-
-
 function pokemon(name, type, hp, attack, turn)
 {
     this.name = name;
@@ -45,9 +42,6 @@ function pokemon(name, type, hp, attack, turn)
     this.attack = attack;
     this.turn = turn;   
 }
-
-var yourRoster
-
 var yourPokemon = new pokemon("Pikachu", "electric", 80, ["quickAttack", quickAttack], true);
 //console.log(yourPokemon); this will print out the pokefacts
 var yourPokemonTwo =new pokemon("Charmeleon", "fire",90, ["Incinerate", incinerate], true);
