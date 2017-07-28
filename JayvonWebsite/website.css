@@ -1,0 +1,53 @@
+.logo
+        {   
+            max-width: 170px;
+            border: 10px solid blue;
+        }
+         ul 
+         /*Makes the background and keeps the navigation bar in plcace  */
+        {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed; /*keeps the navigation bar on top of screen  */
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        li
+         /*Creates the boundary between the bars */
+        {
+        float: left;
+        border-right: 1px solid #bbb;
+        }
+
+        li:last-child 
+        /*unknown  */
+        {
+        border-right: none;
+        }
+
+        li a 
+        /*Makes the cool looking text and font white  */
+        {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active)
+        /*unknown  */
+        {
+            background-color: #111;
+        }
+        .active
+        /*makes the home button green  */
+        {
+            background-color: #4CAF50;
+        }
+        

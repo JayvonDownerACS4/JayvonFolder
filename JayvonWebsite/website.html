@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jayvon's Site</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+        body
+        {
+          background-color: darkgrey;
+        }
+        
+        .logo
+        {   
+            max-width: 170px;
+            border: 10px solid blue;
+        }
+         ul 
+         /*Makes the background and keeps the navigation bar in plcace  */
+        {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed; /*keeps the navigation bar on top of screen  */
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        li
+         /*Creates the boundary between the bars */
+        {
+        float: left;
+        border-right: 1px solid #bbb;
+        }
+
+        li:last-child 
+        /*unknown  */
+        {
+        border-right: none;
+        }
+
+        li a 
+        /*Makes the cool looking text and font white  */
+        {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active)
+        /*unknown  */
+        {
+            background-color: #111;
+        }
+        .active
+        /*makes the home button green  */
+        {
+            background-color: #4CAF50;
+        }
+        .row
+        {  
+            /* display:inline; */
+        }
+        .text-one
+        {
+            border:5px double black;
+            text-align: center;
+            padding: 10px; 
+        }
+        .text-two
+        {   
+            border: 5px double black;
+            text-align: center;
+            padding: 10px;
+        }
+        .text-three
+        {
+            border: 5px double black;
+            text-align: center;
+            padding: 10px;
+        }
+        .text-four
+        {
+            border: 5px double black;
+            /* text-align: center; */
+            padding: 10px;
+        }
+
+
+        
+          
+        
+
+        </style>
+    </head>
+    <body>
+        
+        <!-- The navigation tool  -->
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <div style="padding:20px;margin-top:30px;background-color:darkgrey;height:1500px;">
+
+       
+
+        
+        <!-- The Carasoul images  -->
+        <div class="container">
+        <h2 style = "color:black"> Jayvon Downer</h2>  
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="http://www.bxtimes.com/assets/photos/2016/49/49-jamietowers-2016-12-02-bx01_z.jpg" alt="My Home" style="width:100%;">
+                </div>
+                <div class="item">
+                    <img src="Jayvon himself.png" alt="Chicago" style="width:100%;">
+                </div>
+                <div class="item">
+                    <img src="Jayvon himself.png" alt="My art" style="width:100%;">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <br>
+        <br>
+
+                
+        <!--Some text on bottom of screen  -->
+            <div class="row">
+                <div class ="text-one">
+                    <div class="service-item">
+                        <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-paint-brush fa-stack-1x text-primary"></i>
+                        </span>
+
+                        <h4>
+                            <strong>Who I am</strong>
+                        </h4>
+                        <p> I am a rising senior attending the Academy for Software Engineering. 
+                            I have learned how to code in Javascript, Html and CSS.
+                            Born and raised in the bronx, I call it my home.
+                            I live with my parents, grandparents, and siblings.
+                            I can say that I'm something that people wish they were, a twin 
+                        </p> 
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+
+
+                <div class="text-two">
+                    <div class="service-item">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-code fa-stack-1x text-primary"></i>
+                        </span>
+                                    
+                        <h4>
+                            <strong>What I do</strong>
+                        </h4>
+                        <p> I attend school in the fall and winter, but that's boring.
+                        when I'm not in school, I have a part time job as a dog-walker.
+                        it's a great way to obtain some pocketcash while not over exterting myself in the job.
+                        In the summer, I usually attend summer programs.
+                        Ever since I started Highschool, I've been going to Computer Science camps to improve my skills as a coder.
+                        Recently, I've found this program called All Star Code and it's the best thing I've done so far.
+                        The staff are skilled in their field and are highly socialable. 
+                        I believe that's what sets them apart from other programs that I have attended.
+                        they are relatable and intellegent and that combination is perfect.
+                        I've also found about Ladders for Leaders and it's a Summer Youth Intensive Program (SYEP for short).
+                        It's paying me to participate in All Star Code.
+                        
+                        </p> 
+                    </div> 
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <div class ="text-three">
+                    <div class="service-item">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-music fa-stack-1x text-primary"></i>
+                        </span>
+                                    
+                        <h4>
+                            <strong>What I like</strong>
+                        </h4>
+                        <p> I am in love with art. whether it's music, performance or drawing.
+                            I've had a profound affection for drawing.
+                            I blame my sister and the youtube channel Drawfee.
+                            I've always had some drawing skills, and was usaully better than my classmates.
+                             I've been practing my drawing in hopes of becoming a graphic design major in college.
+                            something else that I was better at than my classmates was music
+                            I'm not saying that I'm the worlds best singer or can play the trumpet / piano like a god,
+                            but I was more than average.
+                            Music was such a great way for me to express myself and the people who I performed for really enjoyed what I gave.
+                            And since were on the topic of music, after studying Hamiliton, I've became obssessed over musicals, and plays in general
+                            I've seen Sweeny Todd, Les Miserables, 1776, Lion King, and others.
+                            I enjoy these more than moveies (with the exception of Into the Woods) and I don't know why.
+                        </p>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                <div class ="text-four">
+                    <div class="service-item">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-book fa-stack-1x text-primary"></i>
+                        </span>                       
+                        <h4>
+                            <strong>Contacts</strong>
+                        </h4>
+                        <p> email</p> 
+                        <p> jayvondowner@gmail.com </p>
+                        <p> jayvond7217@afsenyc.org </p>
+                        <p> Phone Number </p>
+                        <p>   646 - 530- 1151 </p>
+                        <p>Link to git hub</p>
+                        <a href "https://github.com/JayvonDownerACS4/JayvonFolder">
+                            https://github.com/JayvonDownerACS4/JayvonFolder</a>
+                        <p> A link to my LinkedIn </p>
+                        <a href = "https://www.linkedin.com/in/jayvon-downer-541b18ba/">https://www.linkedin.com/in/jayvon-downer-541b18ba/ </p>
+                        
+                          <!--the logo  -->
+                        <div class = "logo">
+                            <img src = "Jayvon himself.png" alt="Logo" height= "150" width="150" border="5"> </img>
+                        </div> 
+                                    
+                        </div>
+                  </div>
+        
+    <body>
+<html>
