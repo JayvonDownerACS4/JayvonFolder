@@ -1,4 +1,4 @@
-var URL = "http://pebble-pickup.herokuapp.com/tweets/random";
+var URL = "http://pebble-pickup.herokuapp.com/tweets/random";   
 $.ajax(
     {
         url:URL,
@@ -9,4 +9,4 @@ $.ajax(
             $("body").append("<h1>" + text + "</h1>");  
         }
     }
-) 
+)

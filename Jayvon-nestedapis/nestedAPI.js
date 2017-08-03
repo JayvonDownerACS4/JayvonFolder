@@ -21,7 +21,7 @@ $.ajax(
                 url:countryURL,
                 success:function(data)
                 {
-                    console.log(data[randomNum]);
+                    console.log(picUrl);
                     var countryName = data[randomNum].name
                     var abbreviation = data[randomNum].alpha2Code
                     $("body").append("<h3>" + abbreviation + ",  " + countryName + "</h3>");  
