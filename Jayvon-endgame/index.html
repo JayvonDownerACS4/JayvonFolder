@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+        <title>Translator.js / WebRTC Voice &amp; Text Translator</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="author" type="text/html" href="https://plus.google.com/+MuazKhan">
+        <meta name="author" content="Muaz Khan">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <link rel="stylesheet" href="https://cdn.webrtc-experiment.com/style.css">
+        <script src "endGame.js"></script>
+        <style>
+            .section-divider {
+                display: inline-block;
+                width: 45%;
+                border: 2px outset black;
+                padding: 5px 10px;
+                vertical-align: top;
+                height: 500px;
+            }
+            
+            .section-divider * {
+                padding: 0;
+                margin: 0;
+            }
+            
+            .section-divider h2 {
+                font-size: 2em;
+                border-bottom: 2px outset black;
+                margin-bottom: 15px;
+                margin-left: -10px;
+                margin-right: -10px;
+                padding: 0 10px;
+                text-align: center;
+            }
+            
+            .section-divider textarea {
+                width: 90%;
+                height: 250px;
+                resize: none;
+                font-size: 2em;
+                padding: 5px 10px;
+            }
+
+            select {
+                height: auto;
+                vertical-align: middle;
+                font-size: inherit;
+            }
+
+            button, input[type=button] {
+                padding: 0 5px!important;
+            }
+            #logo
+            {
+                 border: 2px;
+                position: center;
+                display: inline block;
+            }
+            body
+            {
+                background-image: url("https://s-media-cache-ak0.pinimg.com/736x/b7/77/e5/b777e5c95a05b80ed276727adbeaa555.jpg (84kB)");
+                background-size: cover;
+                background-position: wrap;  
+                background-repeat: no-repeat; 
+            }
+
+    </style>
+    <script type="text/javascript" async="" src="https://webrtcexperiment.disqus.com/embed.js"></script><link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.eceee602870fc4ed49dc5f89e270689e.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.9fcff11af667507b1757062f0192b821.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.aafec1a2f3fa1e486216be04908b0e3a.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js">
+</head>
+
+<body>
+    <div id = "logo">
+        <img src = "Logo.png" width = "125" height = "125"></img>
+     </div> 
+    
+     <div id = "title">
+        <h1>SONG TRANSLATOR</h1>
+     </div>
+    <article>
+        <section class="section-divider">
+            <h2>Convert From</h2><br><br>
+            <select id="convert-from"><option value="af">Afrikaans (af)</option><option value="sq">Albanian (sq)</option><option value="am">Amharic (am)</option><option value="ar">Arabic (ar)</option><option value="hy">Armenian (hy)</option><option value="az">Azerbaijani (az)</option><option value="eu">Basque (eu)</option><option value="be">Belarusian (be)</option><option value="bn">Bengali (bn)</option><option value="bs">Bosnian (bs)</option><option value="bg">Bulgarian (bg)</option><option value="ca">Catalan (ca)</option><option value="ceb">Cebuano (ceb)</option><option value="ny">Chichewa (ny)</option><option value="zh">Chinese (Simplified) (zh)</option><option value="zh-TW">Chinese (Traditional) (zh-TW)</option><option value="co">Corsican (co)</option><option value="hr">Croatian (hr)</option><option value="cs">Czech (cs)</option><option value="da">Danish (da)</option><option value="nl">Dutch (nl)</option><option value="en">English (en)</option><option value="eo">Esperanto (eo)</option><option value="et">Estonian (et)</option><option value="tl">Filipino (tl)</option><option value="fi">Finnish (fi)</option><option value="fr">French (fr)</option><option value="fy">Frisian (fy)</option><option value="gl">Galician (gl)</option><option value="ka">Georgian (ka)</option><option value="de">German (de)</option><option value="el">Greek (el)</option><option value="gu">Gujarati (gu)</option><option value="ht">Haitian Creole (ht)</option><option value="ha">Hausa (ha)</option><option value="haw">Hawaiian (haw)</option><option value="iw">Hebrew (iw)</option><option value="hi">Hindi (hi)</option><option value="hmn">Hmong (hmn)</option><option value="hu">Hungarian (hu)</option><option value="is">Icelandic (is)</option><option value="ig">Igbo (ig)</option><option value="id">Indonesian (id)</option><option value="ga">Irish (ga)</option><option value="it">Italian (it)</option><option value="ja">Japanese (ja)</option><option value="jw">Javanese (jw)</option><option value="kn">Kannada (kn)</option><option value="kk">Kazakh (kk)</option><option value="km">Khmer (km)</option><option value="ko">Korean (ko)</option><option value="ku">Kurdish (Kurmanji) (ku)</option><option value="ky">Kyrgyz (ky)</option><option value="lo">Lao (lo)</option><option value="la">Latin (la)</option><option value="lv">Latvian (lv)</option><option value="lt">Lithuanian (lt)</option><option value="lb">Luxembourgish (lb)</option><option value="mk">Macedonian (mk)</option><option value="mg">Malagasy (mg)</option><option value="ms">Malay (ms)</option><option value="ml">Malayalam (ml)</option><option value="mt">Maltese (mt)</option><option value="mi">Maori (mi)</option><option value="mr">Marathi (mr)</option><option value="mn">Mongolian (mn)</option><option value="my">Myanmar (Burmese) (my)</option><option value="ne">Nepali (ne)</option><option value="no">Norwegian (no)</option><option value="ps">Pashto (ps)</option><option value="fa">Persian (fa)</option><option value="pl">Polish (pl)</option><option value="pt">Portuguese (pt)</option><option value="pa">Punjabi (pa)</option><option value="ro">Romanian (ro)</option><option value="ru">Russian (ru)</option><option value="sm">Samoan (sm)</option><option value="gd">Scots Gaelic (gd)</option><option value="sr">Serbian (sr)</option><option value="st">Sesotho (st)</option><option value="sn">Shona (sn)</option><option value="sd">Sindhi (sd)</option><option value="si">Sinhala (si)</option><option value="sk">Slovak (sk)</option><option value="sl">Slovenian (sl)</option><option value="so">Somali (so)</option><option value="es">Spanish (es)</option><option value="su">Sundanese (su)</option><option value="sw">Swahili (sw)</option><option value="sv">Swedish (sv)</option><option value="tg">Tajik (tg)</option><option value="ta">Tamil (ta)</option><option value="te">Telugu (te)</option><option value="th">Thai (th)</option><option value="tr">Turkish (tr)</option><option value="uk">Ukrainian (uk)</option><option value="ur">Urdu (ur)</option><option value="uz">Uzbek (uz)</option><option value="vi">Vietnamese (vi)</option><option value="cy">Welsh (cy)</option><option value="xh">Xhosa (xh)</option><option value="yi">Yiddish (yi)</option><option value="yo">Yoruba (yo)</option><option value="zu">Zulu (zu)</option></select>
+            
+            <br><br>
+            <textarea id="textarea-from"></textarea><br>
+            <button id="btn-convert-text" style="font-size: 16px;">Convert Your Text Input</button><br>
+           
+        </section>
+        
+        <section class="section-divider">
+            <h2>Convert Into</h2><br><br>
+            <select id="convert-into"><option value="af">Afrikaans (af)</option><option value="sq">Albanian (sq)</option><option value="am">Amharic (am)</option><option value="ar">Arabic (ar)</option><option value="hy">Armenian (hy)</option><option value="az">Azerbaijani (az)</option><option value="eu">Basque (eu)</option><option value="be">Belarusian (be)</option><option value="bn">Bengali (bn)</option><option value="bs">Bosnian (bs)</option><option value="bg">Bulgarian (bg)</option><option value="ca">Catalan (ca)</option><option value="ceb">Cebuano (ceb)</option><option value="ny">Chichewa (ny)</option><option value="zh">Chinese (Simplified) (zh)</option><option value="zh-TW">Chinese (Traditional) (zh-TW)</option><option value="co">Corsican (co)</option><option value="hr">Croatian (hr)</option><option value="cs">Czech (cs)</option><option value="da">Danish (da)</option><option value="nl">Dutch (nl)</option><option value="en">English (en)</option><option value="eo">Esperanto (eo)</option><option value="et">Estonian (et)</option><option value="tl">Filipino (tl)</option><option value="fi">Finnish (fi)</option><option value="fr">French (fr)</option><option value="fy">Frisian (fy)</option><option value="gl">Galician (gl)</option><option value="ka">Georgian (ka)</option><option value="de">German (de)</option><option value="el">Greek (el)</option><option value="gu">Gujarati (gu)</option><option value="ht">Haitian Creole (ht)</option><option value="ha">Hausa (ha)</option><option value="haw">Hawaiian (haw)</option><option value="iw">Hebrew (iw)</option><option value="hi">Hindi (hi)</option><option value="hmn">Hmong (hmn)</option><option value="hu">Hungarian (hu)</option><option value="is">Icelandic (is)</option><option value="ig">Igbo (ig)</option><option value="id">Indonesian (id)</option><option value="ga">Irish (ga)</option><option value="it">Italian (it)</option><option value="ja">Japanese (ja)</option><option value="jw">Javanese (jw)</option><option value="kn">Kannada (kn)</option><option value="kk">Kazakh (kk)</option><option value="km">Khmer (km)</option><option value="ko">Korean (ko)</option><option value="ku">Kurdish (Kurmanji) (ku)</option><option value="ky">Kyrgyz (ky)</option><option value="lo">Lao (lo)</option><option value="la">Latin (la)</option><option value="lv">Latvian (lv)</option><option value="lt">Lithuanian (lt)</option><option value="lb">Luxembourgish (lb)</option><option value="mk">Macedonian (mk)</option><option value="mg">Malagasy (mg)</option><option value="ms">Malay (ms)</option><option value="ml">Malayalam (ml)</option><option value="mt">Maltese (mt)</option><option value="mi">Maori (mi)</option><option value="mr">Marathi (mr)</option><option value="mn">Mongolian (mn)</option><option value="my">Myanmar (Burmese) (my)</option><option value="ne">Nepali (ne)</option><option value="no">Norwegian (no)</option><option value="ps">Pashto (ps)</option><option value="fa">Persian (fa)</option><option value="pl">Polish (pl)</option><option value="pt">Portuguese (pt)</option><option value="pa">Punjabi (pa)</option><option value="ro">Romanian (ro)</option><option value="ru">Russian (ru)</option><option value="sm">Samoan (sm)</option><option value="gd">Scots Gaelic (gd)</option><option value="sr">Serbian (sr)</option><option value="st">Sesotho (st)</option><option value="sn">Shona (sn)</option><option value="sd">Sindhi (sd)</option><option value="si">Sinhala (si)</option><option value="sk">Slovak (sk)</option><option value="sl">Slovenian (sl)</option><option value="so">Somali (so)</option><option value="es">Spanish (es)</option><option value="su">Sundanese (su)</option><option value="sw">Swahili (sw)</option><option value="sv">Swedish (sv)</option><option value="tg">Tajik (tg)</option><option value="ta">Tamil (ta)</option><option value="te">Telugu (te)</option><option value="th">Thai (th)</option><option value="tr">Turkish (tr)</option><option value="uk">Ukrainian (uk)</option><option value="ur">Urdu (ur)</option><option value="uz">Uzbek (uz)</option><option value="vi">Vietnamese (vi)</option><option value="cy">Welsh (cy)</option><option value="xh">Xhosa (xh)</option><option value="yi">Yiddish (yi)</option><option value="yo">Yoruba (yo)</option><option value="zu">Zulu (zu)</option></select>
+            
+            <br><br>
+            <textarea id="textarea-to" disabled="" style="background: #f9f9f9!important;border: 1px solid #f7f1f1;cursor: not-allowed;" title="Output! ReadOnly!"></textarea>
+
+            <br>
+
+            <input type="checkbox" id="robot-voice" title="A client-side robot that can speak your voice in target language!" style="vertical-align: middle;">
+
+            </section>
+
+        </section> 
+    <script src="https://cdn.webrtc-experiment.com/Translator.js"></script>
+    
+    <script>
+        var translator = new Translator();
+
+        function getOption(language) {
+            var option = document.createElement('option');
+            option.value = language.language;
+            if(language.name) {
+                option.innerHTML = language.name + ' (' + language.language + ')'
+            }
+            else {
+                option.innerHTML = language.language;
+            }
+
+            if(language.language == 'en') {
+                option.selected = true;
+            }
+
+            return option;
+        }
+
+        var convertFrom = document.getElementById('convert-from');
+        var convertInto = document.getElementById('convert-into');
+
+        translator.getListOfLanguages(function(languages) {
+            if(!(languages instanceof Array)) return;
+
+            convertFrom.innerHTML = '';
+            convertInto.innerHTML = '';
+
+            languages.forEach(function(language) {
+                var option = getOption(language);
+                convertFrom.appendChild(option);
+
+                var option2 = getOption(language);
+                convertInto.appendChild(option2);
+            });
+
+            localStorageGetItem();
+
+            var blockquote = document.getElementById('blockquote');
+            blockquote.style.display = 'block';
+            blockquote.innerHTML = 'You can translate your voice & texts among <strong class="highlight">' + languages.length + '</strong> languages.';
+        });
+        
+        var textareaFrom = document.getElementById('textarea-from');
+        var textareaTo = document.getElementById('textarea-to');
+        
+        function getLanguages() {
+            var from = document.getElementById('convert-from').value.split(' (')[0];
+            var to = document.getElementById('convert-into').value.split(' (')[0];
+            
+            return {
+                from: from,
+                to: to
+            };
+        }
+        
+        document.getElementById('btn-convert-voice').onclick = function() {
+            this.disabled = true;
+            this.innerHTML = 'Start Speaking!';
+
+            var languages = getLanguages();
+            
+            translator.voiceToText(function(text) {
+                textareaFrom.value = text;
+                
+                document.getElementById('btn-convert-text').onclick(true);
+            }, languages.from);
+        };
+        
+        document.getElementById('btn-convert-text').onclick = function(speakAsWell) {
+            var languages = getLanguages();
+            
+            textareaTo.value = 'Converting into >> ' + document.getElementById('convert-into').value;
+        
+            translator.translateLanguage(textareaFrom.value, {
+                from: languages.from,
+                to: languages.to,
+                callback: function(translatedText) {
+                    textareaTo.value = translatedText;
+                    localStorage.setItem('textarea-to', textareaTo.value);
+                
+                    if(speakAsWell !== true) return;
+                    if (document.getElementById('robot-voice').checked) {
+                        translator.speakTextUsingRobot(translatedText, {
+                            workerPath: 'https://cdn.webrtc-experiment.com/Robot-Speaker.js',
+                            onWorkerFileDownloadStart: function() {
+                                console.log('Downloading worker file. It is about 2MB in size.');
+                            },
+                            onWorkerFileDownloadEnd: function() {
+                                console.log('Worker file is downloaded.');
+                            }
+                        });
+                    } else {
+                        translator.speakTextUsingGoogleSpeaker({
+                            textToSpeak: translatedText,
+                            targetLanguage: languages.to,
+
+                            // please use your own API key; if possible
+                            api_key: 'AIzaSyCgB5hmFY74WYB-EoWkhr9cAGr6TiTHrEE'
+                        });
+                    }
+                }
+            });
+        };
+        
+        document.getElementById('convert-from').onchange = function() {
+            localStorage.setItem('convert-from', this.value);
+        };
+        
+        document.getElementById('convert-into').onchange = function() {
+            localStorage.setItem('convert-into', this.value);
+        };
+        
+        textareaFrom.onchange = function() {
+            localStorage.setItem('textarea-from', this.value);
+        };
+        
+        textareaTo.onchange = function() {
+            localStorage.setItem('textarea-to', this.value);
+        };
+        
+        document.getElementById('robot-voice').onchange = function() {
+            localStorage.setItem('robot-checked', this.checked + '');
+        };
+
+        function localStorageGetItem() {
+            if(localStorage.getItem('convert-from')) {
+                document.getElementById('convert-from').value = localStorage.getItem('convert-from');
+            }
+            
+            if(localStorage.getItem('convert-into')) {
+                document.getElementById('convert-into').value = localStorage.getItem('convert-into');
+            }
+
+            if(localStorage.getItem('textarea-from')) {
+                textareaFrom.value = localStorage.getItem('textarea-from');
+            }
+            
+            if(localStorage.getItem('textarea-to')) {
+                textareaTo.value = localStorage.getItem('textarea-to');
+            }
+            
+            if(localStorage.getItem('robot-checked')) {
+                document.getElementById('robot-voice').checked = localStorage.getItem('robot-checked') === 'true';
+            }
+        }
+
+        localStorageGetItem();
+    </script>
+
+    <!-- commits.js is useless for you! -->
+    <script>
+        window.useThisGithubPath = 'muaz-khan/Translator';
+    </script>
+    <script src="https://cdn.webrtc-experiment.com/commits.js" async=""> </script>
+
+<script src="https://api.github.com/repos/muaz-khan/Translator?callback=callback00" async=""></script><script src="https://cdn.webrtc-experiment.com/common.js" async=""></script><script src="https://api.github.com/repos/muaz-khan/Translator?callback=callback00" async=""></script><script src="https://api.github.com/repos/muaz-khan/Translator/commits?sha=master&amp;callback=commitsCallback" async=""></script><iframe style="display: none;"></iframe><script src="https://api.github.com/users/muaz-khan?callback=callback00" async=""></script><script src="https://api.github.com/repos/muaz-khan/Translator/issues?sha=master&amp;callback=issuesCallback" async=""></script>
+</body>
+
+
+</html>
