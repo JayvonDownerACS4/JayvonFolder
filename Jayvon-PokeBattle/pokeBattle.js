@@ -4,7 +4,7 @@ function setup()
      background(4,94,239);
  }
 
-function draw()
+function draw()on draw()
 {
     rect(30, 575, 1150, 200); //moves
     rect(30, 50, 1150, 500, 50); // battel box
